@@ -18,9 +18,7 @@ Coppeliasim: V4.3.0
 
   5. Launch Spyder. Click on File -> Open and navigate to the downloaded setup. Select the file main.py, run it by clicking on the green play button. 
   
-  You should be able to see the robot moving towards the green sphere which acts as the goal point. You can move the goal point while the program is running and evaluate how the controller responds. 
-
-Note that this is just a demonstration of some of the basic capabilities available.
+  You should be able to see the robot moving forward and then turning. Note that this is just a demonstration of some of the basic capabilities available.
 
      
 ## Working explained:
@@ -46,9 +44,6 @@ To interact with any object in Coppleiasim we need to first obtain the object's 
 
 #### start_simulation()
 Wrapper for the simxStartSimulation function to check if the simulation started without errors.
-
-### control.py 
-Implements a simple waypoint control. 
 
 ### robot_params.py 
 Stores the physical parameter values that are important for the simulation
