@@ -8,7 +8,7 @@ OS: Windows 10/11; Ubuntu: 18/20; Mac
 Python: 3.6.x
 Coppeliasim: V4.3.0
 
-To check the compatibility of your system, follow the instructions [here]().
+To check the compatibility of your system, follow the instructions [here](https://github.com/BijoSebastian/ED5315_Mobile_Robot_Sim_Setup/tree/main/Demo) and run the demo script.
 
 ## Instructions:
 
@@ -28,40 +28,13 @@ To check the compatibility of your system, follow the instructions [here]().
 
   6.	If your implementation of the gtg function(goal to goal) is correct, you will see robot moving to the position of green blob(which is goal). To check for robustness of your implementation, the goal/green blob will spawn again.(Thus implementation is checked for two random goals!)
 
-7. ***Instructions for uploading solution***:	You need to add these three files in a zip folder and upload it to moodle: 
+7. **Instructions for uploading solution**:	You need to add these *three* files in a zip folder and upload it to moodle: 
     - Upload  **only** the completed **control.py** file.(Do not make any changes to other files)
-    - A writeup/report on the control calculation that you implemented.
+    - A writeup/report about the controller that you implemented.
     - Take a screen recording of the coppeliasim screen and IDE side by side as shown in solution video below.
 
 ## Solution video:
 The goal pose moves randomly every time a new instance in launched.
 
-
-  ![Example Solution](ED5315_Mobile_Robot_Sim_Setup/Assignment_1/solution/solution_example_2.mp4)
-     
-## Working explained:
-
-The provided scenario consists of a Pioneer P3DX robot, a camera that points to the robot and a green goal point for the robot. The robot is in a flat terrain with walls. The view from the camera pointing to the robot is shown in inset on the top right corner of the screen. 
-
-### main.py
-Sets up the simulation. All of the interactions with Coppleiasim are contained within the sim_interface file. For the sim_interface to work make sure you have following files in your directory:
-1. sim.py
-2. simConst.py
-3. the appropriate remote API library: "remoteApi.dll" (Windows), "remoteApi.dylib" (Mac) or "remoteApi.so" (Linux) 
-
-### sim_interface.py
-Sets up the connection to the simulator, obtains handles for objects in simulation, uses the handles to obtain the position of the walls within the simulated scenario, read the position and orientation of the robot as well as goal point, set velocities to the wheels on the robot, as well as start and shutdown the simulation. 
-
-The code relies entirely on the [Legacy remote API functions (Python)](https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm). The [sim_interface file](https://github.com/BijoSebastian/mobile_robot_sim_setup/blob/main/sim_interface.py) contains wrappers on top of the API functions to simplify mobile robot simulation within Coppeliasim. Some of the wrapper functions are explained below:
-
-#### sim_init()
-Closes all existing connections to Coppleiasim and creates a new connection to the default socket opened by Coppleiasim at the start of the simulation
-
-#### get_handles()
-To interact with any object in Coppleiasim we need to first obtain the object's handle. This handle needs to be provided in subsequent function calls for setting the objects position, reading the objects position, setting velocity for motor etc.
-
-#### start_simulation()
-Wrapper for the simxStartSimulation function to check if the simulation started without errors.
-
-### robot_params.py 
-Stores the physical parameter values that are important for the simulation
+![Solution run 1](solution/Solution1.gif)
+![Solution run 2](solution/Solution2.gif)

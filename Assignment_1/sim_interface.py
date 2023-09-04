@@ -54,9 +54,9 @@ def get_handles():
   # Handle to the goal:
   res , goal_handle = sim.simxGetObjectHandle(client_ID, "/Sphere", sim.simx_opmode_blocking)
   
-  #These two lines spawn the robot at the random points range given below at the start of simulation
+  #These two lines spawn the robot at the random points range given below, at the start of simulation
   x=np.random.randint(12.5,20,size=1)
-  y=np.random.randint(21,23,size=1)
+  y=np.random.randint(19,21,size=1)
   sim.simxSetObjectPosition(client_ID, goal_handle, -1 ,[x,y,0.35], sim.simx_opmode_streaming)
   
   # Get the position of the goal for the first time in streaming mode

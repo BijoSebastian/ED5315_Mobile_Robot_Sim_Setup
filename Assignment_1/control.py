@@ -28,11 +28,11 @@ def gtg(robot_state, goal_state):
     Kp = 0.00656
     Kd = 0.0001
     K = 0.4
-
+    
     #determine how far to rotate to face the goal point
     e_new = error between desired and current orientation of robot (in degress) ??
-    #Remember to restrict error to (-180 ,180)
     
+    #Remember to restrict error to (-180 ,180)
     
     current_time = time.time()
     dt = current_time-previous_time
@@ -42,7 +42,8 @@ def gtg(robot_state, goal_state):
     e_dot = ??
     W = ??
     prev_heading_error = ??
-    
+    prev_heading_error = e_new
+
     #find distance to goal
     d = distance to goal point??
     
