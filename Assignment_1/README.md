@@ -2,7 +2,7 @@
 Waypoint control of a mobile robot(differential drive) in Coppleiasim(V-REP)
 
 ## Setup:
-OS: Windows 10/11; Ubuntu: 18/20; Mac
+OS: Windows 10/11; Ubuntu 20.04; Mac
 
 
 Python: 3.6.x
