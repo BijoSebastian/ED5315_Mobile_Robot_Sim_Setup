@@ -28,11 +28,6 @@ To check the compatibility of your system, follow the instructions [here](https:
 
   6.	If your implementation of the gtg function(goal to goal) is correct, you will see robot moving to the position of green blob(which is goal). To check for robustness of your implementation, the goal/green blob will spawn again.(Thus implementation is checked for two random goals!)
 
-7. **Instructions for uploading solution**:	You need to add these *three* files in a zip folder and upload it to moodle: 
-    - Upload  **only** the completed **control.py** file.(Do not make any changes to other files)
-    - A writeup/report about the controller that you implemented.
-    - Take a screen recording of the coppeliasim screen and IDE side by side as shown in solution video below.
-
 ## Solution video:
 The goal pose moves randomly every time a new instance in launched.
 
