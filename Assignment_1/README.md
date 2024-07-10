@@ -29,7 +29,7 @@ To check the compatibility of your system, follow the instructions [here](https:
   6.	If your implementation of the gtg function(goal to goal) is correct, you will see robot moving to the position of green blob(which is goal). To check for robustness of your implementation, the goal/green blob will spawn again.(Thus implementation is checked for two random goals!)
 
 ## Solution video:
-The goal pose moves randomly every time a new instance in launched.
+The goal pose moves randomly every time a new instance is launched.
 
 ![Solution run 1](solution/Solution1.gif)
 ![Solution run 2](solution/Solution2.gif)
