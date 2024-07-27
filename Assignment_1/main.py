@@ -73,8 +73,6 @@ def main():
     else:
         print ('Failed connecting to remote API server')
     
-    #stop robots
-    sim_interface.setvel_pioneers(0.0, 0.0)
     sim_interface.sim_shutdown()
     time.sleep(2.0)
     return
