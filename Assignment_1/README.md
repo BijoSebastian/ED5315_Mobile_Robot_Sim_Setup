@@ -14,9 +14,7 @@ To check the compatibility of your system, follow the instructions [here](https:
 
   1. Download the setup provided in this repository. If you are familiar with how to use git on windows do that, if not click on the green button that says code and click on download zip. Once the download is complete, double click to extract the contents and place them in a location of your choice, the downloads folder itself works fine.
 
-  2. Complete the **gtg function** (go to goal) in the file **control.py**.
-
-  Read through the **control.py** file and implement **PD controller** for **angular velocity**, and **P controller** for **linear velocity**.  Do not make any changes to the other code files provided to you.
+  2. Complete the **gtg function** (go to goal) in the file **control.py**. Read through the **control.py** file and implement **PD controller** for **angular velocity**, and **P controller** for **linear velocity**.  Do not make any changes to the other code files provided to you.
 
   3. Once you have completed the go to goal implementation(**gtg function**), launch Coppeliasim. Click on File->Open Scene. Navigate to the downloaded setup and select the file “mobile robot.ttt”. Run the simulation by clicking on the light blue play button.
 
