@@ -16,11 +16,9 @@ To check the compatibility of your system, follow the instructions [here](https:
 
   2. Complete the **gtg function** (go to goal) in the file **control.py**.
 
-  Read through the **control.py** file and implement **PD controller** for **angular velocity**, and **P controller** for **linear velocity**. 
-  
-  To get the pseudo code for waypoint control read the lecture slides from .
+  Read through the **control.py** file and implement **PD controller** for **angular velocity**, and **P controller** for **linear velocity**.  Do not make any changes to the other code files provided to you.
 
-  3. Once you have completed the go to goal implementation(**gtg function**), launch Coppeliasim, open the provided [scenario](). Click on File->Open Scene. Navigate to the downloaded setup and select the file “mobile robot.ttt”. Run the simulation by clicking on the light blue play button.
+  3. Once you have completed the go to goal implementation(**gtg function**), launch Coppeliasim. Click on File->Open Scene. Navigate to the downloaded setup and select the file “mobile robot.ttt”. Run the simulation by clicking on the light blue play button.
 
   4. Launch Spyder. Click on File -> Open and navigate to the downloaded setup. Select the file main.py, run it by clicking on the green play button.(Always ensure you are in the same repository!) 
 
