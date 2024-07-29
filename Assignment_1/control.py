@@ -42,7 +42,6 @@ def gtg(robot_state, goal_state):
     e_dot = ??
     W = ??
     prev_heading_error = ??
-    prev_heading_error = e_new
 
     #find distance to goal
     d = distance to goal point??
