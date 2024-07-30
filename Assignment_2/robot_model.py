@@ -3,6 +3,7 @@ Mobile robot simulation setup
 @author: Bijo Sebastian 
 """
 
+import numpy as np
 
 def simulate(robot_state, control_input, delta_T = 0.5):
    
