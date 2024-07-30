@@ -12,7 +12,6 @@ def at_goal(robot_state, goal_state):
     d = distance to goal point??
     
     if d <= robot_params.goal_threshold:
-        print("Reached goal")
         return True
     else:
         return False
