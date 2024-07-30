@@ -1,4 +1,4 @@
-# ED5315 Assignment-1
+# ED5315 Assignment-2
 Impliment odometry for a mobile robot(differential drive) in Coppleiasim(V-REP)
 
 ## Setup:
