@@ -1,6 +1,8 @@
 import numpy as np
 import robot_params
 
+goal_flag=0
+
 try:
   import sim
 except:
@@ -13,7 +15,6 @@ except:
   print ('')
 
 client_ID = []
-prev_time = 0.0
 
 
 def sim_init():
@@ -22,8 +23,7 @@ def sim_init():
   
   #Initialize sim interface
   sim.simxFinish(-1) # just in case, close all opened connections
-  client_ID=sim.simxStart('127.0.0.1',19997,True,True,5000,5) # Connect to CoppeliaSim   
-  sim_timer() 
+  client_ID=sim.simxStart('127.0.0.1',19999,True,True,5000,5) # Connect to CoppeliaSim    
   if client_ID!=-1:
     print ('Connected to remote API server')
     return True
@@ -141,19 +141,10 @@ def localize_robot():
   x = pioneer_Position[0]
   y = pioneer_Position[1]
   theta  =pioneer_Orientation[2]
+  print("robot", x,y,theta)
 
   return [x,y,theta]       
 
-def sim_timer():
-    global sim
-    global client_ID
-    global prev_time
-    
-    new_time = sim.simxGetLastCmdTime(client_ID)
-    delta_sim_time = (new_time - prev_time)/1000.0
-    prev_time = new_time
-    return delta_sim_time
-    
 def change_goal_pose():
   #Function to change goal pose 
   global sim
@@ -209,7 +200,7 @@ def setvel_pioneers(V, W):
   sim.simxSetJointTargetVelocity(client_ID, pioneer_left_motor_handle, Vl, sim.simx_opmode_oneshot_wait)
   sim.simxSetJointTargetVelocity(client_ID, pioneer_right_motor_handle, Vr, sim.simx_opmode_oneshot_wait)
   
-  return 
+  return  
 
 def sim_shutdown():
   #Gracefully shutdown simulation
