@@ -1,5 +1,5 @@
 # ED5315 Assignment-1
-Impliment odometry for a mobile robot(differential drive) in Coppleiasim(V-REP)
+Implement odometry for a mobile robot(differential drive) in Coppleiasim(V-REP)
 
 ## Setup:
 OS: Windows 10/11; Ubuntu 20.04
@@ -18,11 +18,11 @@ To check the compatibility of your system, follow the instructions [here](https:
 
   3. Once you have completed the implementation of **simulate function** in robot_model.py, launch Coppeliasim. Click on File->Open Scene. Navigate to the downloaded setup and select the file “mobile robot.ttt”. Run the simulation by clicking on the light blue play button.
 
-  4. Launch Spyder. Click on File -> Open and navigate to the downloaded setup. Select the file main.py, run it by clicking on the green play button.(Always ensure you are in the same repository!) 
+  4. Launch Spyder. Click on File -> Open and navigate to the downloaded setup. Select the file main.py, run it by clicking on the green play button. (Ensure you are in the right folder, Assignment-1 in this case) 
 
   5. Always ensure that the simulation is running before you launch the code, otherwise you will get an error that says **"Failed connecting to the remote API server. Program ended"**.
 
-  6.	If your implementation of the robot model inside the siulate function is correct, you will see two plots with the actual path tarced by the robot in red and odometry model in yellow. It is expected that there will be deviation between the two, as shown below:
+  6.	If your implementation of the robot model inside the simulate function is correct, you will see two plots with the actual path traced by the robot in red and odometry model in yellow. It is expected that there will be deviation between the two, as shown below:
 
 ![Solution figure](Solution_figure.png)
 
