@@ -14,7 +14,7 @@ To check the compatibility of your system, follow the instructions [here](https:
 
   1. Download the setup provided in this repository. If you are familiar with how to use git on windows do that, if not click on the green button that says code and click on download zip. Once the download is complete, double click to extract the contents and place them in a location of your choice, the downloads folder itself works fine.
 
-  2. Complete the file **robot_model.py**. Do not make any changes to the other code files provided to you.
+  2. Complete the file **robot_model.py**. Please note that the control inputs given to be model is the linear velocity (v) and angular velocity (w) for the differential drive robot. Do not make any changes to the other code files provided to you.
 
   3. Once you have completed the implementation of **simulate function** in robot_model.py, launch Coppeliasim. Click on File->Open Scene. Navigate to the downloaded setup and select the file “mobile robot.ttt”. Run the simulation by clicking on the light blue play button.
 
