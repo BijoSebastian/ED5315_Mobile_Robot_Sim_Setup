@@ -30,7 +30,7 @@ def plot_initialization():
     plt.ion()
     
     # Initialize figure and axis
-    fig,ax = plt.subplots(figsize=(20,20))
+    fig,ax = plt.subplots(figsize=(8,6))
 
     ax.set_xticks([i for i in range(0,21)],minor= False)
     ax.set_yticks([i for i in range(0,21)],minor= False)
