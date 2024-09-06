@@ -25,6 +25,6 @@ To check the compatibility of your system, follow the instructions [here](https:
   6.	If you had defined the matrix correctly, you will see a robot moving along with a phantom robot. The real robot is the ground truth and the phantom robot 's position is based on the odometry calculations.
 
 ## Solution video:
-The goal pose moves randomly every time a new instance is launched.
+Your output would look like this.
 
 ![Solution run 1](solution/Solution1.gif)
