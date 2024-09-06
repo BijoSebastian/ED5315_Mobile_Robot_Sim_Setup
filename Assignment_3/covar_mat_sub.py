@@ -11,7 +11,7 @@ class matrix_calculator:
         delta_theta = (right_dist_moved - left_dist_moved)/L
 
         #calcualting the jacobian of the states with respect to the previous state
-        F_p = np.array(([1,0,-abs(delta_d*np.sin(pose[2]+delta_theta/(2)))],[0,1,abs(delta_d*np.cos(pose[2]+delta_theta/(2)))],[0,0,1]))
+        F_p = ??
 
         #########################################################
 
@@ -25,17 +25,10 @@ class matrix_calculator:
         delta_d = (left_dist_moved + right_dist_moved)/2
         delta_theta = (right_dist_moved - left_dist_moved)/L
         
-        #calcualting the components of the jacobain of the state with respect to the control inputs 
-        f11= (1/2)*(np.cos(pose[2]+delta_theta/2)) - (delta_d/(2*L))*np.sin(pose[2]+delta_theta/2)
-        f12= (1/2)*(np.cos(pose[2]+delta_theta/2)) + (delta_d/(2*L))*np.sin(pose[2]+delta_theta/2)
+        #calcualting the jacobain of the states with respect to the control inputs 
+        
 
-        f21 = (1/2)*(np.sin(pose[2]+delta_theta/2)) + (delta_d/(2*L))*np.cos(pose[2]+delta_theta/2)
-        f22 = (1/2)*(np.sin(pose[2]+delta_theta/2)) - (delta_d/(2*L))*np.cos(pose[2]+delta_theta/2)
-
-        f31 = (1/L)
-        f32 = -(1/L)
-
-        F_u = np.array(([f11,f12],[f21,f22],[f31,f32]))
+        F_u = ??
 
         #########################################################
 
