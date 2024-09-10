@@ -1,8 +1,5 @@
 import os
 import numpy as np
-import rospy
-from geometry_msgs.msg import Twist, PoseWithCovarianceStamped
-from tf.transformations import euler_from_quaternion
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 
