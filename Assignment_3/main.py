@@ -5,19 +5,11 @@ import localization
 import covar_mat_sub
 import visualization
 import time
-import signal
 import sys  # Import the sys module for sys.exit()
 import matplotlib
 matplotlib.use('Qt5Agg')  # or 'Agg' for non-interactive use
 import matplotlib.pyplot as plt
 #Global Variables
-
-def signal_handler(sig,frame):
-    print('Shutting down...')
-    plt.close('all')
-    sys.exit(0)
-
-signal.signal(signal.SIGINT,signal_handler)
 
 def main():
 
