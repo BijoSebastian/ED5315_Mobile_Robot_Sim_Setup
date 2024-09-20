@@ -33,7 +33,7 @@ class EKF:
         return Fu
 
     def covariance_prediction(self, delta_t):
-        #Covariance propoagate function
+        #Covariance propogate function
         ??            
         return
     
