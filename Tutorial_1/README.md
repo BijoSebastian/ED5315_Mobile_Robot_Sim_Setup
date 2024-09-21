@@ -12,9 +12,9 @@ and std deviation with orientation is +-0.0873 radians (5°).
 
 2. There is a RADAR in the system that allows for measurement of vehicle speed to be a constant 5 m/s. You are also informed that the wheelbase of the vehicle is 2.5 m.
 
-3. Given the starting pose of the vehicle is position is (0,0 m), orientation is 0 radian, and steering is also at 0 radian.
+3. The starting pose of the vehicle is position (0,0 m), orientation 0 radian, and steering 0 radian.
 
-4. Complete the tracker implimentation in the EKF_class. Sample solution is provided below for you
+4. Complete the tracker implimentation in the EKF_class. Sample output from the tracking algorithm is provided below for you
 
 ![Trajectory estimate](trajectory.png)
 ![Orientation estimate](orientation.png)
