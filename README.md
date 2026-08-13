@@ -4,7 +4,7 @@ Assignment and demo files for **ED5315: Introduction to Field and Service Roboti
 
 ## Setup
 
-- OS: Windows 10/11, or Linux (Ubuntu) 
+- OS: Windows 10/11, or Linux (Ubuntu) 22.04 or 24.04
 - Python: >=3.10
 - CoppeliaSim: 4.10 (EDU) or later
 
