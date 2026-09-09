@@ -13,9 +13,10 @@ truth, exactly like Assignment 1. The only thing that's changed is obstacles: in
 being handed their positions directly, you must detect them yourself each control-loop
 iteration, from:
 - `image`: an RGB array from the onboard camera (`ed5315.sensors.read_camera_image`) -
-  already upscaled for reliable ArUco decoding.
+  already upscaled for reliable ArUco decoding. CoppeliaSim's standard perspective vision sensor assumes an ideal pinhole camera with zero distortion.
   `robot_params.vision_fov` / `robot_params.vision_resolution` describe its field of view
-  and native resolution.
+  and native resolution. `robot_params.aruco_tag_size` describes the Aruco tag size. The obstacles in the scene uses ArUco tag family: cv2.aruco.DICT_4X4_50, with ids 0, 1, 2, 3, 4, 5.
+  Each obstacle has six tags on it but all with the same id, to allow identification from any angle.
 - `lidar_scan`: a full-circle range scan (`ed5315.sensors.read_lidar`).
 
 Some obstacle in the scene moves; some are stationary. Use `robot_state` (still ground truth) to convert a detection
