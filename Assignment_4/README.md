@@ -19,7 +19,8 @@ an Extended Kalman Filter that:
   own `odometry.estimate_pose` directly for this step - see below), then
 - **corrects** that prediction using any obstacles detected this step, by comparing where
   you expected to see them (from your predicted pose and their known position in
-  `ground_truth_map`) against where perception.py actually detected them.
+  `ground_truth_map`) against where perception.py actually detected them. **Please note that
+  obstacle ID 5 is dynamic and should not be used in localisation unless you can account for its motion**.
 
 This is **EKF localization**, not EKF SLAM: the map (`ground_truth_map`) is given and fixed
 throughout - your filter only ever estimates the robot's own pose, never the map.
