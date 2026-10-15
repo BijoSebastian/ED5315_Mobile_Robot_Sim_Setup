@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#This IS what you submit for Tutorial 1 - the only file that's graded. See
+#README.md for the motion model, the measurement model and the Submission
+#section.
 """
-Created on Fri Sep 20 21:51:13 2024
-
 @author: Bijo Sebastian
 """
 
@@ -9,35 +9,38 @@ import numpy as np
 
 class EKF:
     def __init__(self, state, covariance):
-        self.state = state 
-        self.covariance = covariance
-        self.L = 2.5 #wheelbase in m
-        self.U = 5 #vehicle speed in m/s 
-        self.Q = np.array([[0.1]]) #variance in control
-        self.R = np.diag([0.0625, 0.0625, 0.007621]) #Measurement covariance
-        self.H = ??
-        
+        #state: [x, y, vx, vy, omega] - the target's position [m], velocity
+        #    [m/s] and turn rate [rad/s], as a numpy array of length 5
+        #covariance: 5x5 numpy array
+        self.state = np.array(state, dtype=float)
+        self.covariance = np.array(covariance, dtype=float)
+        self.Q = np.diag([0.15 ** 2, 0.15 ** 2, 0.30 ** 2]) #Variance of the noise inputs [a_x, a_y, alpha]
+        self.R = np.diag([0.15 ** 2, 0.15 ** 2]) #Measurement covariance
+        self.H = None #TODO: 2x5 measurement Jacobian
+
     def state_prediction(self, delta_t):
-        #State prediction
-        ??
-        return 
+        #State prediction: move self.state forward by delta_t seconds using
+        #the motion model with the noise inputs set to zero
+        raise NotImplementedError
 
     def compute_Fp(self, delta_t):
-        #Compute Fp based on state, control input, and fixed params
-        ??
-        return Fp
-        
-    def compute_Fu(self, delta_t):
-        #Compute Fu based on state, control input, and fixed params
-        ??                    
-        return Fu
+        #Compute Fp (5x5): Jacobian of the motion model with respect to the
+        #state, evaluated at the current self.state
+        raise NotImplementedError
+
+    def compute_Fdelta(self, delta_t):
+        #Compute Fdelta (5x3): Jacobian of the motion model with respect to
+        #the noise inputs [a_x, a_y, alpha], evaluated at the current self.state
+        raise NotImplementedError
 
     def covariance_prediction(self, delta_t):
-        #Covariance propogate function
-        ??            
-        return
-    
+        #Covariance propagation: update self.covariance using Fp, Fdelta and
+        #self.Q. main.py calls this BEFORE state_prediction, so self.state is
+        #still the state from before this step
+        raise NotImplementedError
+
     def correction(self, measurement):
-        #Correction step
-        ??
-        return
+        #Correction step: measurement is a numpy array [x, y] from the
+        #sensor. Update self.state and self.covariance. main.py only calls
+        #this when the target is visible
+        raise NotImplementedError

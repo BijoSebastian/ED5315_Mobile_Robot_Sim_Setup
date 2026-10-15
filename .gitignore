@@ -35,3 +35,4 @@ instructor/
 
 # Generated result plots (each assignment's main.py regenerates its own on every run)
 Assignment_*/result.png
+Tutorial_*/result.png
